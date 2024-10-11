@@ -19,7 +19,7 @@ public class UserController {
         return new ResponseEntity<>(service.save(userDTO), HttpStatus.OK);
     }
 
-    @GetMapping("/findById/{id}")
+    @GetMapping("/{id}")
     public ResponseEntity<UserDTO> findById(@PathVariable Integer id) {
         return new ResponseEntity<>(service.findById(id), HttpStatus.OK);
     }
